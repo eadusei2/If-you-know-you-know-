@@ -66,4 +66,5 @@ def registration():
     Button(registration_gui, text="Register", width=20, height=2, bg="turquoise").pack()
 
 
-log_on()
+if __name__ == '__main__':
+    log_on()
