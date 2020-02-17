@@ -26,6 +26,7 @@ def log_on():
     # register button
     Button(text="Register", height="8", width="80", command=registration).pack()
 
+    # exit button
     button = Button(text="Exit", height="4", width="20",command=exit_screen)
     button.pack()
 
@@ -43,17 +44,20 @@ def registration():
     username = StringVar()
     password = StringVar()
 
-    Label(registration_gui, text="Please enter your information", bg="turquoise").pack()
+    Label(registration_gui, text="Please enter your information", bg="turquoise", width=100, height=2).pack()
     Label(registration_gui, text="", bg='gray37').pack()
 
-    username_lable = Label(registration_gui, text="Username", bg='turquoise')
+    username_lable = Label(registration_gui, text="Username")
     username_lable.pack()
 
     username_entry = Entry(registration_gui, textvariable=username, width=40)
     username_entry.pack()
 
+    # space between username and password
+    Label(registration_gui, text="", bg='gray37').pack()
+
     # Set password label
-    password_lable = Label(registration_gui, text="Password", bg='turquoise')
+    password_lable = Label(registration_gui, text="Password")
     password_lable.pack()
 
     # Set password entry
@@ -63,7 +67,11 @@ def registration():
     Label(registration_gui, text="", bg='gray37').pack()
 
     # Set register button
-    Button(registration_gui, text="Register", width=20, height=2, bg="turquoise").pack()
+    Button(registration_gui, text="Register", width=20, height=2).pack()
+
+    # exit button
+    button1 = Button(registration_gui,text="Exit", height="2", width="10",command=exit_screen)
+    button1.pack()
 
 
 if __name__ == '__main__':
