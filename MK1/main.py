@@ -1,4 +1,4 @@
-# Las Coronas, Main program code, CIS 440
+# Github sucks balls
 
 from tkinter import *
 
