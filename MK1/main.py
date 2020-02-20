@@ -1,3 +1,5 @@
+# Las Coronas, Main program code, CIS 440
+
 from tkinter import *
 
 
