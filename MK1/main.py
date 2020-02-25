@@ -114,7 +114,7 @@ def register_authentication():
     cursor = db_connection.cursor()
 
     # Executing Query
-    cursor.execute(f"INSERT INTO User Values (4, '{user1}', '{passw1}',null,'{email1}',0);")
+    cursor.execute(f"INSERT INTO user Values (4, '{user1}', '{passw1}',null,'{email1}',0);")
     Label(registration_gui, text="'Successful Registration'", bg='gray37').pack()
 
     data = cursor.fetchall()
@@ -192,7 +192,7 @@ def login_authentication():
     cursor = db_connection.cursor()
 
     # Executing Query
-    cursor.execute(f"SELECT username, password From User;")
+    cursor.execute(f"SELECT username, password From user;")
     #cursor.execute(f"SELECT * From User WHERE username='{user}' AND password='{passw}';")
 
     data = cursor.fetchall()
