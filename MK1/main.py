@@ -35,11 +35,10 @@ def log_on():
     main_entry.mainloop()
     log_on()
     login_screen()
-    #login_authentication()
 
 
 def registration():
-    global username, password
+    global username, password, username_entry, password_entry, email_entry, email, registration_gui
     registration_gui = Toplevel(main_entry)
     registration_gui.title("Registration")
     registration_gui.geometry("600x350")
@@ -47,9 +46,16 @@ def registration():
 
     username = StringVar()
     password = StringVar()
+    email = StringVar()
 
     Label(registration_gui, text="Please enter your information", bg="turquoise", width=100, height=2).pack()
     Label(registration_gui, text="", bg='gray37').pack()
+
+    email_lable = Label(registration_gui, text="Email")
+    email_lable.pack()
+
+    email_entry = Entry(registration_gui, textvariable=email, width=40)
+    email_entry.pack()
 
     username_lable = Label(registration_gui, text="Username")
     username_lable.pack()
@@ -71,13 +77,50 @@ def registration():
     Label(registration_gui, text="", bg='gray37').pack()
 
     # Set register button
-    Button(registration_gui, text="Register", width=20, height=2).pack()
+    Button(registration_gui, text="Register", width=20, height=2, command=register_authentication).pack()
 
     # exit button
     button1 = Button(registration_gui, text="Exit", height="2", width="10", command=exit_screen)
     button1.pack()
 
     # --------------------------------------------------------------------------------------------
+
+
+def register_authentication():
+    global user1, passw1, checkU, checkp, email1
+
+    try:
+        user1 = username.get()
+        passw1 = password.get()
+        email1 = email.get()
+
+        password_entry.delete(0, END)
+        username_entry.delete(0, END)
+        email_entry.delete(0, END)
+
+    except:
+        pass
+
+    try:
+        db_connection = MySQLdb.connect("107.180.1.16", "lascoronas", "!!Lascoronas", "lascoronas")
+        # If connection is not successful
+    except:
+        print("Can't connect to database")
+        return 0
+    # If Connection Is Successful
+    print("Connected")
+
+    # Making Cursor Object For Query Execution
+    cursor = db_connection.cursor()
+
+    # Executing Query
+    cursor.execute(f"INSERT INTO User Values (4, '{user1}', '{passw1}',null,'{email1}',0);")
+    Label(registration_gui, text="'Successful Registration'", bg='gray37').pack()
+
+    data = cursor.fetchall()
+    print(data)
+
+    db_connection.close()
 
 
 def login_screen():
