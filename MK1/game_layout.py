@@ -1,7 +1,7 @@
 from tkinter import *
 
 win = Tk()
-win.geometry("1200x500")
+win.geometry("1200x800")
 win.config(bg='dark turquoise')
 
 username = StringVar()
