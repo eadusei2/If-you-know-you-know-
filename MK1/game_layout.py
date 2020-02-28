@@ -7,6 +7,12 @@ import json
 start = list()
 
 
+def background_music():
+        filename = '/Users/evansadusei/Documents/GitHub/ALFRED/ALFRED_MK3/MK3_SKILLS/sounds/reminder.wav'
+        wave_obj = sa.WaveObject.from_wave_file(filename)
+        play_obj = wave_obj.play()
+        play_obj.wait_done()
+
 def game_screen():
     global choice_ID, question_Sen, choice1, choice2, choice3, choice4, \
         choice_1, choice_2, choice_3, choice_4,correct_choice
