@@ -5,7 +5,8 @@ import random
 
 
 def game_screen():
-    global choice_ID, question_Sen, choice1, choice2, choice3, choice4
+    global choice_ID, question_Sen, choice1, choice2, choice3, choice4, \
+        choice_1, choice_2, choice_3, choice_4,correct_choice
 
     try:
         db_connection = MySQLdb.connect("107.180.1.16", "lascoronas", "!!Lascoronas", "lascoronas")
@@ -69,25 +70,53 @@ def game_screen():
 
     choice_1 = StringVar()
     choice_1.set(choice1)
-    choice1 = Button(win, textvariable=choice_1, background='gray37', width=60, height='6', font=40, fg='dark turquoise')
+    choice1 = Button(win, textvariable=choice_1, background='gray37', width=60, height='6', font=40, fg='dark turquoise', command=correct_pick1)
     choice1.grid(row=1, column=0, sticky=E)
 
     choice_2 = StringVar()
     choice_2.set(choice2)
-    choice2 = Button(win, textvariable=choice_2, bg='gray37', width=60, height='6',font=40, fg='dark turquoise')
+    choice2 = Button(win, textvariable=choice_2, bg='gray37', width=60, height='6',font=40, fg='dark turquoise', command=correct_pick2)
     choice2.grid(row=1, column=1, sticky=W)
 
     choice_3 = StringVar()
     choice_3.set(choice3)
-    choice3 = Button(win, textvariable=choice_3, bg='gray37', width=60, height='6',font=40, fg='dark turquoise')
+    choice3 = Button(win, textvariable=choice_3, bg='gray37', width=60, height='6',font=40, fg='dark turquoise', command=correct_pick3)
     choice3.grid(row=2, column=0, sticky=E)
 
     choice_4 = StringVar()
     choice_4.set(choice4)
-    choice4 = Button(win, textvariable=choice_4, bg='gray37', width=60, height='6',font=40, fg='dark turquoise')
+    choice4 = Button(win, textvariable=choice_4, bg='gray37', width=60, height='6',font=40, fg='dark turquoise', command=correct_pick4)
     choice4.grid(row=2, column=1, sticky=W)
 
     win.mainloop()
+
+
+def correct_pick1():
+    if choice_1.get() == correct_choice:
+        print('Correct pick test complete')
+    elif choice_1.get() != correct_choice:
+        print('wrong answer test complete')
+
+
+def correct_pick2():
+    if choice_2.get() == correct_choice:
+        print('Correct pick test complete')
+    elif choice_2.get() != correct_choice:
+        print('wrong answer test complete')
+
+
+def correct_pick3():
+    if choice_3.get() == correct_choice:
+        print('Correct pick test complete')
+    elif choice_3.get() != correct_choice:
+        print('wrong answer test complete')
+
+
+def correct_pick4():
+    if choice_4.get() == correct_choice:
+        print('Correct pick test complete')
+    elif choice_4.get() != correct_choice:
+        print('wrong answer test complete')
 
 
 if __name__ == '__main__':
