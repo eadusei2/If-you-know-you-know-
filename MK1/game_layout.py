@@ -2,8 +2,9 @@ from tkinter import *
 import MySQLdb
 from MySQLdb import _mysql
 import random
+import json
 
-
+start =list()
 def game_screen():
     global choice_ID, question_Sen, choice1, choice2, choice3, choice4, \
         choice_1, choice_2, choice_3, choice_4,correct_choice
@@ -33,21 +34,61 @@ def game_screen():
                        f"where qc.cat_id={};" )"""
 
     info = cursor.fetchall()
-    data = random.choice(info)
+    with open('question.json', 'r') as file:
+        test1 = json.load(file)
+
+    for i in info:
+        choice_ID = f'{i[0]}'
+        question_Sen = f'{i[1]}'.strip()
+        correct_choice = f'{i[2]}'.strip()
+        choice1 = f'{i[3]}'.strip()
+        choice2 = f'{i[4]}'.strip()
+        choice3 = f'{i[5]}'.strip()
+        choice4 = f'{i[6]}'.strip()
+
+        #start.append(i)
+
+        test1 = [{"ID": choice_ID, "Question_ID": question_Sen, "correct_Choice": correct_choice, "choice1": choice1,
+                  "choice2": choice2, "choice3": choice3, "choice4": choice4}]
+
+        #start.append(test1)
+
+        with open('question.json', 'w') as file:
+            start_dict = {"QUESTIONS": test1}
+            start.append(start_dict)
+
+            run = json.dump(start, file, indent=3)
+
+    with open('question.json', 'r') as file:
+            test2 = json.load(file)
+
+    data = random.choice(test2)
+    print(data)
+
+
+    question_Sen = data['QUESTIONS'][0]['Question_ID']
+    correct_choice = data['QUESTIONS'][0]['correct_Choice']
+    choice1 = data['QUESTIONS'][0]['choice1']
+    choice2 = data['QUESTIONS'][0]['choice2']
+    choice3 = data['QUESTIONS'][0]['choice3']
+    choice4 = data['QUESTIONS'][0]['choice4']
+
+
+
 
     # holds the question ID
-    choice_ID = data[0]
-
-    # holds the question sentence
-    question_Sen = data[1]
-    # correct choice
-    correct_choice = data[2]
-    # 4 options
-    choice1 = data[3]
-    choice2 = data[4]
-    choice3 = data[5]
-    choice4 = data[6]
-
+    """    choice_ID = data[0]
+    
+        # holds the question sentence
+        question_Sen = data[1]
+    
+        # correct choice
+        correct_choice = f'{data[2]}'
+        # 4 options
+        choice1 = f'{data[3]} '
+        choice2 = f'{data[4]} '
+        choice3 = f'{data[5]} '
+        choice4 = f'{data[6]} '"""
 
     print(question_Sen, choice1,choice2,choice3, choice4)
 
@@ -94,6 +135,7 @@ def game_screen():
 def correct_pick1():
     if choice_1.get() == correct_choice:
         print('Correct pick test complete')
+
     elif choice_1.get() != correct_choice:
         print('wrong answer test complete')
 
@@ -101,6 +143,7 @@ def correct_pick1():
 def correct_pick2():
     if choice_2.get() == correct_choice:
         print('Correct pick test complete')
+
     elif choice_2.get() != correct_choice:
         print('wrong answer test complete')
 
@@ -108,6 +151,7 @@ def correct_pick2():
 def correct_pick3():
     if choice_3.get() == correct_choice:
         print('Correct pick test complete')
+
     elif choice_3.get() != correct_choice:
         print('wrong answer test complete')
 
@@ -115,9 +159,17 @@ def correct_pick3():
 def correct_pick4():
     if choice_4.get() == correct_choice:
         print('Correct pick test complete')
+
+
     elif choice_4.get() != correct_choice:
         print('wrong answer test complete')
 
+def test():
+    with open('question.json', 'r') as file:
+        test2 = json.load(file)
+
+    data = random.choice(test2)
+    print(data)
 
 if __name__ == '__main__':
     game_screen()
