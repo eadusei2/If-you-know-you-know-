@@ -353,6 +353,17 @@ def game_screen():
 
     gameScreen_Gui.update()
 
+    with open('question_number.json', 'r') as file:
+        exe = json.load(file)
+        number = exe['question_num']
+
+    question_number = {"question_num": number}
+    question_number["question_num"] = question_number.get("question_num", 0) + 1
+
+    with open('question_number.json', 'w') as file:
+        save = json.dump(question_number, file)
+        print(f'question_num: {save}')
+
 
 def game_menu():
     global select_genre, log_out, game_button, categoryOpp, clicked, gameMenu_Gui
