@@ -3,6 +3,7 @@ from MySQLdb import _mysql
 from tkinter import *
 import random
 import json
+import sys
 
 start = list()
 
@@ -10,6 +11,12 @@ start = list()
 def exit_screen():
     main_entry.destroy()
 
+def exit_menu():
+    """"""
+    sys.exit()
+
+def exit_game():
+    gameScreen_Gui.destroy()
 
 def log_on():
     global main_entry
@@ -219,7 +226,9 @@ def login_authentication():
 
 def game_screen():
     global choice_ID, question_Sen, choice1, choice2, choice3, choice4, \
-        choice_1, choice_2, choice_3, choice_4,correct_choice
+        choice_1, choice_2, choice_3, choice_4,correct_choice, gameScreen_Gui
+
+    gameMenu_Gui.destroy()
 
     gameScreen_Gui = Toplevel()
     gameScreen_Gui.geometry("1200x800")
@@ -331,15 +340,19 @@ def game_screen():
     choice_4.set(choice4)
     choice4 = Button(gameScreen_Gui, textvariable=choice_4, bg='gray37', width=60, height='6',font=40, fg='dark turquoise', command=correct_pick4)
     choice4.grid(row=2, column=1, sticky=W)
-    gameScreen_Gui.update()
 
-    #gameScreen_Gui.mainloop()
+    exit1 = Button(gameScreen_Gui, text='Log Out', font=("Calibri", 12), height=2, width=10, command=exit_game)
+    exit1.grid(row=0, column=1, sticky=NE, padx=85)
+
+    gameScreen_Gui.update()
 
 
 def game_menu():
-    global select_genre, log_out, game_button, categoryOpp, clicked
+    global select_genre, log_out, game_button, categoryOpp, clicked, gameMenu_Gui
 
-    gameMenu_Gui = Toplevel()
+    login_gui.destroy()
+
+    gameMenu_Gui = Tk()
     gameMenu_Gui.geometry("1200x800")
     gameMenu_Gui.config(bg='dark turquoise')
 
@@ -373,7 +386,7 @@ def game_menu():
     elif clicked.get() == 'Action':
         categoryOpp = '5'
 
-    log_out = Button(frame1, text='Log Out', font=("Calibri", 10), height=1, width=8)
+    log_out = Button(frame1, text='Log Out', font=("Calibri", 10), height=1, width=8, command=exit_menu)
     log_out.pack(side=TOP, anchor=E, padx=10, pady=10)
 
     leaderboard_button = Button(frame2, text='Leaderboard', font=("Calibri", 10), height=1, width=12)
@@ -383,9 +396,6 @@ def game_menu():
     game_button.pack(side=TOP, anchor=N, pady=200)
 
     gameMenu_Gui.update()
-
-
-    #gameMenu_Gui.mainloop()
 
 
 def correct_pick1():
@@ -414,6 +424,7 @@ def correct_pick4():
         print('Correct pick test complete')
     elif choice_4.get() != correct_choice:
         print('wrong answer test complete')
+
 
 if __name__ == '__main__':
     log_on()
