@@ -6,6 +6,7 @@ import json
 import sys
 
 start = list()
+score = 0
 
 def exit():
     sys.exit()
@@ -322,29 +323,29 @@ def game_screen():
 
     question = StringVar()
     question.set(question_Sen)
-    question_label = Label(gameScreen_Gui, textvariable=question, background='white', width='120', height='8', font=40)
+    question_label = Label(gameScreen_Gui, textvariable=question, background='white', width='100', height='8', font=40)
     question_label.grid(row=0, columnspan=2, padx=120, pady=100)
 
     #Label(win, text='Question:', height=3).grid(row=0, sticky=W, padx=10)
 
     choice_1 = StringVar()
     choice_1.set(choice1)
-    choice1 = Button(gameScreen_Gui, textvariable=choice_1, background='gray37', width=60, height='6', font=40, fg='dark turquoise', command=correct_pick1)
+    choice1 = Button(gameScreen_Gui, textvariable=choice_1, background='gray37', width=40, height='5', font=30, fg='dark turquoise', command=correct_pick1)
     choice1.grid(row=1, column=0, sticky=E)
 
     choice_2 = StringVar()
     choice_2.set(choice2)
-    choice2 = Button(gameScreen_Gui, textvariable=choice_2, bg='gray37', width=60, height='6',font=40, fg='dark turquoise', command=correct_pick2)
+    choice2 = Button(gameScreen_Gui, textvariable=choice_2, bg='gray37', width=40, height='5',font=30, fg='dark turquoise', command=correct_pick2)
     choice2.grid(row=1, column=1, sticky=W)
 
     choice_3 = StringVar()
     choice_3.set(choice3)
-    choice3 = Button(gameScreen_Gui, textvariable=choice_3, bg='gray37', width=60, height='6',font=40, fg='dark turquoise', command=correct_pick3)
+    choice3 = Button(gameScreen_Gui, textvariable=choice_3, bg='gray37', width=40, height='5',font=30, fg='dark turquoise', command=correct_pick3)
     choice3.grid(row=2, column=0, sticky=E)
 
     choice_4 = StringVar()
     choice_4.set(choice4)
-    choice4 = Button(gameScreen_Gui, textvariable=choice_4, bg='gray37', width=60, height='6',font=40, fg='dark turquoise', command=correct_pick4)
+    choice4 = Button(gameScreen_Gui, textvariable=choice_4, bg='gray37', width=40, height='5',font=30, fg='dark turquoise', command=correct_pick4)
     choice4.grid(row=2, column=1, sticky=W)
 
     exit1 = Button(gameScreen_Gui, text='Log Out', font=("Calibri", 12), height=2, width=10, command=exit_game)
@@ -403,100 +404,110 @@ def game_menu():
 
     gameMenu_Gui.update()
 
+
 def destroy():
     okay.destroy()
 
 
+def cor_destroy():
+    correct12.destroy()
+
+
 def incorrect():
     """ """
+    score = 0
     global okay
 
     okay = Tk()
     okay.geometry("1200x800")
     okay.config(bg='dark turquoise')
 
-    #continue1 = Button(okay, text='Continue', bg='gray37', width=60, height=6, font=40, fg='dark turquoise',
-                  #   command=game_screen)
-    #continue1.grid(row=2, column=1, sticky=W)
-
     continue1 = Button(okay, text=" Continue", command=lambda: [game_screen(), destroy()])
+    continue1.grid(row=2, column=1, sticky=W)
+
+def score1():
+    score = 0
+    final_score = {"Score": score}
+    final_score["Score"] += 20
+
+    with open('score.json', 'w') as file:
+        save = json.dump(final_score, file)
+        print(f'Score: {save}')
+
+
+def correct():
+    """ """
+    global correct12
+
+    with open('score.json', 'r') as file:
+        exe = json.load(file)
+        score = exe['Score']
+    final_score = {"Score": score}
+    final_score["Score"] = final_score.get("Score", 0) + 20
+
+    with open('score.json', 'w') as file:
+        save = json.dump(final_score, file)
+        print(f'Score: {save}')
+
+    correct12 = Tk()
+    correct12.geometry("1200x800")
+    correct12.config(bg='dark turquoise')
+
+    continue1 = Button(correct12, text=" Continue", command=lambda: [game_screen(), cor_destroy()])
     continue1.grid(row=2, column=1, sticky=W)
 
 
 def correct_pick1():
-    score = 0
-    question_number = 0
 
     if choice_1.get() == correct_choice:
         print('Correct pick test complete')
         gameScreen_Gui.destroy()
-        incorrect()
-        score += 20
-        question_number += 1
+        correct()
 
     elif choice_1.get() != correct_choice:
         print('wrong answer test complete')
         gameScreen_Gui.destroy()
         incorrect()
-        score += 20
-        question_number += 1
 
 
 def correct_pick2():
-    score = 0
-    question_number = 0
 
     if choice_2.get() == correct_choice:
         print('Correct pick test complete')
         gameScreen_Gui.destroy()
-        incorrect()
-        score += 20
-        question_number += 1
+        correct()
 
     elif choice_2.get() != correct_choice:
         print('wrong answer test complete')
         gameScreen_Gui.destroy()
         incorrect()
-        score += 20
-        question_number += 1
 
 
 def correct_pick3():
-    score = 0
-    question_number = 0
 
     if choice_3.get() == correct_choice:
         print('Correct pick test complete')
         gameScreen_Gui.destroy()
-        incorrect()
-        score += 20
-        question_number +=1
+        correct()
 
     elif choice_3.get() != correct_choice:
         print('wrong answer test complete')
         gameScreen_Gui.destroy()
-        incorrect()
-        score += 20
-        question_number += 1
+        correct()
 
 
 def correct_pick4():
-    score = 0
-    question_number = 0
 
     if choice_4.get() == correct_choice:
         print('Correct pick test complete')
         gameScreen_Gui.destroy()
-        incorrect()
-        score += 20
-        question_number +=1
+        correct()
 
     elif choice_4.get() != correct_choice:
         print('wrong answer test complete')
         gameScreen_Gui.destroy()
-        incorrect()
-        score += 20
-        question_number +=1
+        correct()
+
 
 if __name__ == '__main__':
     log_on()
