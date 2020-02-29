@@ -158,7 +158,7 @@ def game_menu():
 
     genres = ['Genres', 'Comedy', 'Romance', 'Thriller', 'Action']
     clicked = StringVar()
-    clicked.set('Genres')
+    clicked.set(genres[0])
     #select_genre = ttk.Combobox(frame3, values=['Comedy', 'Romance', 'Thriller', 'Action'])
     select_genre = OptionMenu(frame3, clicked, *genres)
     select_genre.config(width=10, height=2, font=("Calibri", 40))

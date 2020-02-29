@@ -7,6 +7,8 @@ import sys
 
 start = list()
 
+def exit():
+    sys.exit()
 
 def exit_screen():
     main_entry.destroy()
@@ -40,7 +42,7 @@ def log_on():
     Button(text="Register", height="8", width="80", command=registration).pack()
 
     # exit button
-    button = Button(text="Exit", height="4", width="20", command=exit_screen)
+    button = Button(text="Exit", height="4", width="20", command=exit)
     button.pack()
 
     main_entry.mainloop()
