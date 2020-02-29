@@ -5,29 +5,51 @@ import random
 import json
 import sys
 import simpleaudio as sa
+from playsound import playsound
 
 start = list()
 score = 0
 
 
+def correct_music():
+    file = ['C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Groovy Baby!.wav',
+            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Straight up 1x.wav',
+            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Talladega Nights, I piss excellence.wav'
+            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Travis Scott - It\'s Lit Soundbyte.wav',
+            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Travis Scott - Ya Ya Soundbyte.wav','']
+
+
+def incorrect_music():
+    file = ['C:\Users\evans\OneDrive\Documents\CIS440_Game_music\BOO YOU STINK  Spongebob Squarepants.wav',
+            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\The A-team - MR T Quotes (2).wav',
+            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Yoda - That is why you fail.wav',
+            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\You\'re killin me smalls!!.wav']
+
+
 def background_music():
-    filename = 'C:\Users\evans\PycharmProjects\If-you-know-you-know-\MK1\CIS440_Game_music\Academy Awards Original Music Theme.wav'
-    wave_obj = sa.WaveObject.from_wave_file(filename)
-    play_obj = wave_obj.play()
-    play_obj.wait_done()
+    file = ['C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Academy Awards Original Music Theme.wav']
+
+
+def intro_music():
+    files = ['C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Pusha T - If You Know You Know.wav']
+
 
 def exit():
     sys.exit()
 
+
 def exit_screen():
     main_entry.destroy()
+
 
 def exit_menu():
     """"""
     sys.exit()
 
+
 def exit_game():
     gameScreen_Gui.destroy()
+
 
 def log_on():
     global main_entry
@@ -529,4 +551,4 @@ def correct_pick4():
 
 
 if __name__ == '__main__':
-    log_on()
+    background_music()
