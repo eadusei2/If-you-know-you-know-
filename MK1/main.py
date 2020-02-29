@@ -4,9 +4,17 @@ from tkinter import *
 import random
 import json
 import sys
+import simpleaudio as sa
 
 start = list()
 score = 0
+
+
+def background_music():
+    filename = 'C:\Users\evans\PycharmProjects\If-you-know-you-know-\MK1\CIS440_Game_music\Academy Awards Original Music Theme.wav'
+    wave_obj = sa.WaveObject.from_wave_file(filename)
+    play_obj = wave_obj.play()
+    play_obj.wait_done()
 
 def exit():
     sys.exit()
