@@ -7,7 +7,6 @@ from tkinter import ttk
 
 start = list()
 
-
 def background_music():
         filename = '/Users/evansadusei/Documents/GitHub/ALFRED/ALFRED_MK3/MK3_SKILLS/sounds/reminder.wav'
         wave_obj = sa.WaveObject.from_wave_file(filename)
@@ -18,20 +17,41 @@ def background_music():
 def callbackFunc(event):
     print("New Element Selected")
 
+def incorrect():
+    """ """
+    global okay
+
+    okay = Tk()
+    okay.geometry("1200x800")
+    okay.config(bg='dark turquoise')
+
+    #continue1 = Button(okay, text='Continue', bg='gray37', width=60, height=6, font=40, fg='dark turquoise',
+                  #   command=game_screen)
+    #continue1.grid(row=2, column=1, sticky=W)
+
+    continue1 = Button(okay, text=" Continue", command=lambda: [game_screen(), destroy()])
+    continue1.grid(row=2, column=1, sticky=W)
+
+
+    okay.update()
+
+def destroy():
+    okay.destroy()
+
 
 def game_screen():
     global choice_ID, question_Sen, choice1, choice2, choice3, choice4, \
-        choice_1, choice_2, choice_3, choice_4,correct_choice
+        choice_1, choice_2, choice_3, choice_4,correct_choice, win
 
-    if clicked.get() == 'Comedy':
-        categoryOpp = '2'
-    elif clicked.get() == 'Romance':
-        categoryOpp = '3'
-    elif clicked.get() == 'Thriller':
-        categoryOpp = '4'
-    elif clicked.get() == 'Action':
-        categoryOpp = '5'
-    print(categoryOpp)
+    """    if clicked.get() == 'Comedy':
+            categoryOpp = '2'
+        elif clicked.get() == 'Romance':
+            categoryOpp = '3'
+        elif clicked.get() == 'Thriller':
+            categoryOpp = '4'
+        elif clicked.get() == 'Action':
+            categoryOpp = '5'
+        print(categoryOpp)"""
 
     try:
         db_connection = MySQLdb.connect("107.180.1.16", "lascoronas", "!!Lascoronas", "lascoronas")
@@ -46,15 +66,15 @@ def game_screen():
     cursor = db_connection.cursor()
 
     # Executing Query
-    """    cursor.execute(f"select distinct qc.choice_id, q.question, qc.correct_choice, qc.choice1, "
-                       f"qc.choice2, qc.choice3, qc.choice4 from question_choices qc inner join questions q "
-                       f"on qc.question_id=q.question_id inner join question_category qct "
-                       f"on qct.cat_id = qc.cat_id and q.cat_id = qc.cat_id where qc.cat_id=5;")"""
-    # the genre category will go in brackets
     cursor.execute(f"select distinct qc.choice_id, q.question, qc.correct_choice, qc.choice1, "
                        f"qc.choice2, qc.choice3, qc.choice4 from question_choices qc inner join questions q "
                        f"on qc.question_id=q.question_id inner join question_category qct "
-                       f"on qct.cat_id = qc.cat_id and q.cat_id = qc.cat_id where qc.cat_id={categoryOpp};")
+                       f"on qct.cat_id = qc.cat_id and q.cat_id = qc.cat_id where qc.cat_id=5;")
+    # the genre category will go in brackets
+    """    cursor.execute(f"select distinct qc.choice_id, q.question, qc.correct_choice, qc.choice1, "
+                           f"qc.choice2, qc.choice3, qc.choice4 from question_choices qc inner join questions q "
+                           f"on qc.question_id=q.question_id inner join question_category qct "
+                           f"on qct.cat_id = qc.cat_id and q.cat_id = qc.cat_id where qc.cat_id={categoryOpp};")"""
 
     info = cursor.fetchall()
     with open('question.json', 'r') as file:
@@ -177,36 +197,162 @@ def game_menu():
 
     win.mainloop()
 
+
 def show():
     print("Selected value :", clicked.get())
 
+
 def correct_pick1():
+    score = 0
+    question_number = 0
+
     if choice_1.get() == correct_choice:
         print('Correct pick test complete')
+        win.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
+
     elif choice_1.get() != correct_choice:
         print('wrong answer test complete')
+        win.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
 
 
 def correct_pick2():
+    score = 0
+    question_number = 0
+
     if choice_2.get() == correct_choice:
         print('Correct pick test complete')
+        win.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
+
     elif choice_2.get() != correct_choice:
         print('wrong answer test complete')
+        win.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
 
 
 def correct_pick3():
+    score = 0
+    question_number = 0
+
     if choice_3.get() == correct_choice:
         print('Correct pick test complete')
+        win.destroy()
+        incorrect()
+        score += 20
+        question_number +=1
+
     elif choice_3.get() != correct_choice:
         print('wrong answer test complete')
+        win.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
 
 
 def correct_pick4():
+    score = 0
+    question_number = 0
+
     if choice_4.get() == correct_choice:
         print('Correct pick test complete')
+        win.destroy()
+        incorrect()
+        score += 20
+        question_number +=1
+
     elif choice_4.get() != correct_choice:
         print('wrong answer test complete')
+        win.destroy()
+        incorrect()
+        score += 20
+        question_number +=1
+
+
+"""def correct_pick1():
+    score = 0
+    question_number = 0
+
+    if choice_1.get() == correct_choice:
+        print('Correct pick test complete')
+        win.destroy()
+        game_screen()
+        score += 20
+        question_number +=1
+    elif choice_1.get() != correct_choice:
+        print('wrong answer test complete')
+        win.destroy()
+        game_screen()
+        score += 20
+        question_number +=1
+
+
+def correct_pick2():
+    score = 0
+    question_number = 0
+
+    if choice_2.get() == correct_choice:
+        print('Correct pick test complete')
+        win.destroy()
+        game_screen()
+        score += 20
+        question_number +=1
+
+    elif choice_2.get() != correct_choice:
+        print('wrong answer test complete')
+        win.destroy()
+        game_screen()
+        score += 20
+        question_number +=1
+
+
+def correct_pick3():
+    score = 0
+    question_number = 0
+
+    if choice_3.get() == correct_choice:
+        print('Correct pick test complete')
+        win.destroy()
+        game_screen()
+        score += 20
+        question_number +=1
+
+    elif choice_3.get() != correct_choice:
+        print('wrong answer test complete')
+        win.destroy()
+        game_screen()
+        score += 20
+        question_number +=1
+
+
+def correct_pick4():
+    score = 0
+    question_number = 0
+
+    if choice_4.get() == correct_choice:
+        print('Correct pick test complete')
+        win.destroy()
+        game_screen()
+        score += 20
+        question_number +=1
+
+    elif choice_4.get() != correct_choice:
+        print('wrong answer test complete')
+        win.destroy()
+        game_screen()
+        score += 20
+        question_number +=1
+"""
 
 
 if __name__ == '__main__':
-    game_menu()
+    game_screen()

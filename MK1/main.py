@@ -230,7 +230,11 @@ def game_screen():
     global choice_ID, question_Sen, choice1, choice2, choice3, choice4, \
         choice_1, choice_2, choice_3, choice_4,correct_choice, gameScreen_Gui
 
-    gameMenu_Gui.destroy()
+    try:
+        gameMenu_Gui.destroy()
+    except:
+        pass
+
 
     gameScreen_Gui = Toplevel()
     gameScreen_Gui.geometry("1200x800")
@@ -399,34 +403,100 @@ def game_menu():
 
     gameMenu_Gui.update()
 
+def destroy():
+    okay.destroy()
+
+
+def incorrect():
+    """ """
+    global okay
+
+    okay = Tk()
+    okay.geometry("1200x800")
+    okay.config(bg='dark turquoise')
+
+    #continue1 = Button(okay, text='Continue', bg='gray37', width=60, height=6, font=40, fg='dark turquoise',
+                  #   command=game_screen)
+    #continue1.grid(row=2, column=1, sticky=W)
+
+    continue1 = Button(okay, text=" Continue", command=lambda: [game_screen(), destroy()])
+    continue1.grid(row=2, column=1, sticky=W)
+
 
 def correct_pick1():
+    score = 0
+    question_number = 0
+
     if choice_1.get() == correct_choice:
         print('Correct pick test complete')
+        gameScreen_Gui.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
+
     elif choice_1.get() != correct_choice:
         print('wrong answer test complete')
+        gameScreen_Gui.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
 
 
 def correct_pick2():
+    score = 0
+    question_number = 0
+
     if choice_2.get() == correct_choice:
         print('Correct pick test complete')
+        gameScreen_Gui.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
+
     elif choice_2.get() != correct_choice:
         print('wrong answer test complete')
+        gameScreen_Gui.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
 
 
 def correct_pick3():
+    score = 0
+    question_number = 0
+
     if choice_3.get() == correct_choice:
         print('Correct pick test complete')
+        gameScreen_Gui.destroy()
+        incorrect()
+        score += 20
+        question_number +=1
+
     elif choice_3.get() != correct_choice:
         print('wrong answer test complete')
+        gameScreen_Gui.destroy()
+        incorrect()
+        score += 20
+        question_number += 1
 
 
 def correct_pick4():
+    score = 0
+    question_number = 0
+
     if choice_4.get() == correct_choice:
         print('Correct pick test complete')
+        gameScreen_Gui.destroy()
+        incorrect()
+        score += 20
+        question_number +=1
+
     elif choice_4.get() != correct_choice:
         print('wrong answer test complete')
-
+        gameScreen_Gui.destroy()
+        incorrect()
+        score += 20
+        question_number +=1
 
 if __name__ == '__main__':
     log_on()
