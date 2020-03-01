@@ -21,7 +21,7 @@ def correct_music():
             'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Travis Scott - Ya Ya Soundbyte.wav']
 
     song = random.choice(file)
-    playsound(song, TRUE)
+    PlaySound(song, SND_FILENAME|SND_ASYNC)
 
 
 def incorrect_music():
@@ -31,13 +31,18 @@ def incorrect_music():
             'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\You\'re killin me smalls!!.wav']
 
     song = random.choice(file)
-    PlaySound(song, SND_FILENAME|SND_LOOP|SND_ASYNC)
+    PlaySound(song, SND_FILENAME|SND_ASYNC)
 
 
 def background_music():
     file = ['C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Academy Awards Original Music Theme.wav']
-    #for f in file:
-        #song = random.choice(f)
+
+    winsound.PlaySound(file[0], winsound.SND_ASYNC | winsound.SND_ALIAS)
+
+
+def game_music():
+    file = ['C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Academy Awards Original Music Theme1.wav']
+
     winsound.PlaySound(file[0], winsound.SND_ASYNC | winsound.SND_ALIAS)
 
 
@@ -47,6 +52,7 @@ def intro_music():
     #for f in file:
     song = random.choice(file)
     PlaySound(song, SND_FILENAME|SND_LOOP|SND_ASYNC)
+
 
 
 def exit():
@@ -277,13 +283,11 @@ def game_screen():
     global choice_ID, question_Sen, choice1, choice2, choice3, choice4, \
         choice_1, choice_2, choice_3, choice_4,correct_choice, gameScreen_Gui
 
-    background_music()
-
     try:
         gameMenu_Gui.destroy()
     except:
         pass
-
+    game_music()
 
     gameScreen_Gui = Toplevel()
     gameScreen_Gui.geometry("1200x800")
@@ -335,8 +339,6 @@ def game_screen():
         choice2 = f'{i[4]}'.strip()
         choice3 = f'{i[5]}'.strip()
         choice4 = f'{i[6]}'.strip()
-
-        #start.append(i)
 
         test1 = [{"ID": choice_ID, "Question_ID": question_Sen, "correct_Choice": correct_choice, "choice1": choice1,
                   "choice2": choice2, "choice3": choice3, "choice4": choice4}]
@@ -416,9 +418,9 @@ def game_screen():
 def game_menu():
     global select_genre, log_out, game_button, categoryOpp, clicked, gameMenu_Gui
 
-    background_music()
-
     login_gui.destroy()
+    winsound.PlaySound(None, winsound.SND_ASYNC)
+    background_music()
 
     gameMenu_Gui = Tk()
     gameMenu_Gui.geometry("1200x800")
@@ -486,6 +488,7 @@ def incorrect():
 
     continue1 = Button(okay, text=" Continue", command=lambda: [game_screen(), destroy()])
     continue1.grid(row=2, column=1, sticky=W)
+
 
 def score1():
     score = 0
