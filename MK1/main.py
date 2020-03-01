@@ -6,32 +6,47 @@ import json
 import sys
 import simpleaudio as sa
 from playsound import playsound
+import winsound
+from winsound import SND_FILENAME,SND_ASYNC, SND_LOOP, PlaySound
 
 start = list()
 score = 0
 
 
 def correct_music():
-    file = ['C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Groovy Baby!.wav',
-            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Straight up 1x.wav',
-            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Talladega Nights, I piss excellence.wav'
-            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Travis Scott - It\'s Lit Soundbyte.wav',
-            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Travis Scott - Ya Ya Soundbyte.wav','']
+    file = ['C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Groovy Baby!.wav',
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Straight up 1x.wav',
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Talladega Nights, I piss excellence.wav',
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Travis Scott - It\'s Lit Soundbyte.wav',
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Travis Scott - Ya Ya Soundbyte.wav']
+
+    song = random.choice(file)
+    playsound(song, TRUE)
 
 
 def incorrect_music():
-    file = ['C:\Users\evans\OneDrive\Documents\CIS440_Game_music\BOO YOU STINK  Spongebob Squarepants.wav',
-            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\The A-team - MR T Quotes (2).wav',
-            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Yoda - That is why you fail.wav',
-            'C:\Users\evans\OneDrive\Documents\CIS440_Game_music\You\'re killin me smalls!!.wav']
+    file = ['C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\BOO YOU STINK  Spongebob Squarepants.wav',
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\The A-team - MR T Quotes (2).wav',
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Yoda - That is why you fail.wav',
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\You\'re killin me smalls!!.wav']
+
+    song = random.choice(file)
+    PlaySound(song, SND_FILENAME|SND_LOOP|SND_ASYNC)
 
 
 def background_music():
-    file = ['C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Academy Awards Original Music Theme.wav']
+    file = ['C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Academy Awards Original Music Theme.wav']
+    #for f in file:
+        #song = random.choice(f)
+    winsound.PlaySound(file[0], winsound.SND_ASYNC | winsound.SND_ALIAS)
 
 
 def intro_music():
-    files = ['C:\Users\evans\OneDrive\Documents\CIS440_Game_music\Pusha T - If You Know You Know.wav']
+    file = ['C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Pusha T - If You Know You Know.wav']
+
+    #for f in file:
+    song = random.choice(file)
+    PlaySound(song, SND_FILENAME|SND_LOOP|SND_ASYNC)
 
 
 def exit():
@@ -76,6 +91,7 @@ def log_on():
     button = Button(text="Exit", height="4", width="20", command=exit)
     button.pack()
 
+    intro_music()
     main_entry.mainloop()
     log_on()
     login_screen()
@@ -261,6 +277,8 @@ def game_screen():
     global choice_ID, question_Sen, choice1, choice2, choice3, choice4, \
         choice_1, choice_2, choice_3, choice_4,correct_choice, gameScreen_Gui
 
+    background_music()
+
     try:
         gameMenu_Gui.destroy()
     except:
@@ -398,6 +416,8 @@ def game_screen():
 def game_menu():
     global select_genre, log_out, game_button, categoryOpp, clicked, gameMenu_Gui
 
+    background_music()
+
     login_gui.destroy()
 
     gameMenu_Gui = Tk()
@@ -456,6 +476,7 @@ def cor_destroy():
 
 def incorrect():
     """ """
+    incorrect_music()
     score = 0
     global okay
 
@@ -479,6 +500,7 @@ def score1():
 def correct():
     """ """
     global correct12
+    correct_music()
 
     with open('score.json', 'r') as file:
         exe = json.load(file)
@@ -551,4 +573,4 @@ def correct_pick4():
 
 
 if __name__ == '__main__':
-    background_music()
+    log_on()
