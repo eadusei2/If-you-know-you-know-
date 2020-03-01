@@ -83,7 +83,7 @@ def log_on():
     main_entry.configure(bg='gray37')
 
     # Form label
-    Label(text="Login Or Register", bg="dark turquoise", width="200", height="2", font=("Calibri", 20)).pack()
+    Label(text="Login Or Register", bg="turquoise", width="200", height="2", font=("Calibri", 20)).pack()
     Label(text="", bg='gray37').pack()
 
     # login button
