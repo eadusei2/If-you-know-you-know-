@@ -362,11 +362,11 @@ def game_screen():
     choice3 = data['QUESTIONS'][0]['choice3']
     choice4 = data['QUESTIONS'][0]['choice4']
 
-    print(question_Sen, choice1,choice2,choice3, choice4)
+    print(question_Sen, choice1, choice2, choice3, choice4)
 
     # ------------------------------------------------------------------------------------------------------------------
-    username = StringVar()
-    username_label = Label(gameScreen_Gui, textvariable=username, bg='white', width='20', height='3')
+    #username = StringVar()
+    username_label = Label(gameScreen_Gui, textvariable=username_l, bg='white', width='20', height='3')
     username_label.grid(row=0, column=0, sticky=NW, padx=85)
 
     Label(gameScreen_Gui, text='Username:', height=3).grid(row=0, sticky=NW)
@@ -439,7 +439,7 @@ def game_menu():
     select_genre_label = Label(frame3, text='Select your genre:', font=("Calibri", 15), bg='gray37', fg='white')
     select_genre_label.pack()
 
-    genres = ['Genres', 'Comedy', 'Romance', 'Thriller', 'Action']
+    genres = ['Comedy', 'Romance', 'Thriller', 'Action']
     clicked = StringVar()
     clicked.set(genres[0])
     select_genre = OptionMenu(frame3, clicked, *genres)
