@@ -29,7 +29,9 @@ def incorrect_music():
     file = ['C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\BOO YOU STINK  Spongebob Squarepants.wav',
             'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\The A-team - MR T Quotes (2).wav',
             'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Yoda - That is why you fail.wav',
-            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\You\'re killin me smalls!!.wav']
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\You\'re killin me smalls!!.wav',
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Bishop Bullwinkle Hell To Da Naw,Naw,Naw With Da Bicycle.wav',
+            'C:\\Users\evans\OneDrive\Documents\CIS440_Game_music\Oh hell nah Sound Effect.wav']
 
     song = random.choice(file)
     PlaySound(song, SND_FILENAME|SND_ASYNC)
@@ -103,6 +105,8 @@ def log_on():
     login_screen()
     game_menu()
     game_screen()
+    incorrect()
+    correct()
 
 
 def registration():
@@ -232,6 +236,8 @@ def login_screen():
     button1 = Button(login_gui, text="Exit", height="2", width="10", command=exit_screen)
     button1.pack()
 
+    login_gui.update()
+
     # -----------------------------------------------------------------------------------------
 
 
@@ -358,10 +364,10 @@ def game_screen():
 
         question_Sen = data['QUESTIONS'][0]['Question_ID']
         correct_choice = data['QUESTIONS'][0]['correct_Choice']
-        choice1 = data['QUESTIONS'][0]['choice1']
-        choice2 = data['QUESTIONS'][0]['choice2']
-        choice3 = data['QUESTIONS'][0]['choice3']
-        choice4 = data['QUESTIONS'][0]['choice4']
+        choice11 = data['QUESTIONS'][0]['choice1']
+        choice22 = data['QUESTIONS'][0]['choice2']
+        choice33 = data['QUESTIONS'][0]['choice3']
+        choice44 = data['QUESTIONS'][0]['choice4']
 
         print(question_Sen, choice1, choice2, choice3, choice4)
     except (IOError, FileNotFoundError, TypeError, Exception) as ex:
@@ -384,7 +390,7 @@ def game_screen():
 """
     # ------------------------------------------------------------------------------------------------------------------
     #username = StringVar()
-    username_label = Label(gameScreen_Gui, textvariable=username_l, bg='white', width='20', height='3',font=15)
+    username_label = Label(gameScreen_Gui, textvariable=username_l, bg='white', width='20', height='3', font=15)
     username_label.grid(row=0, column=0, sticky=NW, padx=85)
 
     Label(gameScreen_Gui, text='Username:', height=3).grid(row=0, sticky=NW)
@@ -395,23 +401,27 @@ def game_screen():
     question_label.grid(row=0, columnspan=2, padx=120, pady=100)
 
     choice_1 = StringVar()
-    choice_1.set(choice1)
-    choice1 = Button(gameScreen_Gui, textvariable=choice_1, background='gray37', width=40, height='5', font=30, fg='dark turquoise', command=correct_pick1)
+    choice_1.set(choice11)
+    choice1 = Button(gameScreen_Gui, textvariable=choice_1, background='gray37', width=40, height='5',
+                     font=30, fg='dark turquoise', command=correct_pick1)
     choice1.grid(row=1, column=0, sticky=E)
 
     choice_2 = StringVar()
-    choice_2.set(choice2)
-    choice2 = Button(gameScreen_Gui, textvariable=choice_2, bg='gray37', width=40, height='5',font=30, fg='dark turquoise', command=correct_pick2)
+    choice_2.set(choice22)
+    choice2 = Button(gameScreen_Gui, textvariable=choice_2, bg='gray37', width=40, height='5',font=30,
+                     fg='dark turquoise', command=correct_pick2)
     choice2.grid(row=1, column=1, sticky=W)
 
     choice_3 = StringVar()
-    choice_3.set(choice3)
-    choice3 = Button(gameScreen_Gui, textvariable=choice_3, bg='gray37', width=40, height='5',font=30, fg='dark turquoise', command=correct_pick3)
+    choice_3.set(choice33)
+    choice3 = Button(gameScreen_Gui, textvariable=choice_3, bg='gray37', width=40, height='5',font=30,
+                     fg='dark turquoise', command=correct_pick3)
     choice3.grid(row=2, column=0, sticky=E)
 
     choice_4 = StringVar()
-    choice_4.set(choice4)
-    choice4 = Button(gameScreen_Gui, textvariable=choice_4, bg='gray37', width=40, height='5',font=30, fg='dark turquoise', command=correct_pick4)
+    choice_4.set(choice44)
+    choice4 = Button(gameScreen_Gui, textvariable=choice_4, bg='gray37', width=40, height='5', font=30,
+                     fg='dark turquoise',command=correct_pick4)
     choice4.grid(row=2, column=1, sticky=W)
 
     exit1 = Button(gameScreen_Gui, text='Log Out', font=("Calibri", 12), height=2, width=10, command=exit_game)
@@ -433,7 +443,6 @@ def game_screen():
     if question_number["question_num"] == 10:
         gameScreen_Gui.destroy()
         leaderboard()
-
 
 
 def game_menu():
@@ -526,7 +535,7 @@ def leaderboard():
     leaderboard_gui.update()
 
 
-def destroy():
+def destroy1():
     okay.destroy()
 
 
@@ -544,10 +553,10 @@ def incorrect():
     okay.geometry("1200x800")
     okay.config(bg='dark turquoise')
 
-    Label(okay, text="That is incorrect! D:", height='3', bg='gray37', font=(None, 30)).grid(row=1, columnspan=2,
+    Label(okay, text="That is incorrect! D:",fg='dark turquoise', height='3', bg='gray37', font=(None, 30)).grid(row=1, columnspan=2,
                                                                                             padx=480, pady=100)
 
-    continue_btn = Button(okay, text='Continue', height='3', bg='gray37', command=lambda: [game_screen(), destroy()])
+    continue_btn = Button(okay, text='Continue', height='3', bg='gray37', command=lambda: [game_screen(), destroy1()])
     continue_btn.grid(row=2, sticky=SE)
 
     logout_btn = Button(okay, text='Logout', height='3', bg='gray37', command=log_on)
@@ -556,9 +565,7 @@ def incorrect():
     exit_btn = Button(okay, text='Exit', height='3', width='5', bg='gray37', command=exit_game)
     exit_btn.grid(row=0, column=0, sticky=W)
 
-
-    #continue1 = Button(okay, text=" Continue", command=lambda: [game_screen(), destroy()])
-    #continue1.grid(row=2, column=1, sticky=W)
+    okay.update()
 
 
 def score1():
@@ -590,12 +597,8 @@ def correct():
     correct12.geometry("1200x800")
     correct12.config(bg='dark turquoise')
 
-    #continue1 = Button(correct12, text=" Continue", command=lambda: [game_screen(), cor_destroy()])
-    #continue1.grid(row=2, column=1, sticky=W)
-
-    Label(correct12, text="That is correct! :D", height='5', bg='gray37', font=(None, 30)).grid(row=1, columnspan=2, padx=480,
+    Label(correct12, text="That is correct! :D", height='5', bg='gray37',fg='dark turquoise', font=(None, 30)).grid(row=1, columnspan=2, padx=480,
                                                                                           pady=100)
-
     continue_btn = Button(correct12, text='Continue', height='3', bg='gray37', command=lambda: [game_screen(), cor_destroy()])
     continue_btn.grid(row=2, sticky=SE)
 
@@ -604,58 +607,68 @@ def correct():
 
     exit_btn = Button(correct12, text='Exit', height='3', width='5', bg='gray37', command=exit_game)
     exit_btn.grid(row=0, column=0, sticky=W)
+    correct12.update()
 
 
 def correct_pick1():
+    try:
+        if choice_1.get() == correct_choice:
+            print('Correct pick test complete')
+            gameScreen_Gui.destroy()
+            correct()
 
-    if choice_1.get() == correct_choice:
-        print('Correct pick test complete')
-        gameScreen_Gui.destroy()
-        correct()
-
-    elif choice_1.get() != correct_choice:
-        print('wrong answer test complete')
-        gameScreen_Gui.destroy()
-        incorrect()
+        elif choice_1.get() != correct_choice:
+            print('wrong answer test complete')
+            gameScreen_Gui.destroy()
+            incorrect()
+    except (EXCEPTION,Exception) as ex:
+        pass
 
 
 def correct_pick2():
+    try:
+        if choice_2.get() == correct_choice:
+            print('Correct pick test complete')
+            gameScreen_Gui.destroy()
+            correct()
 
-    if choice_2.get() == correct_choice:
-        print('Correct pick test complete')
-        gameScreen_Gui.destroy()
-        correct()
-
-    elif choice_2.get() != correct_choice:
-        print('wrong answer test complete')
-        gameScreen_Gui.destroy()
-        incorrect()
+        elif choice_2.get() != correct_choice:
+            print('wrong answer test complete')
+            gameScreen_Gui.destroy()
+            incorrect()
+    except (EXCEPTION, Exception) as ex:
+        pass
 
 
 def correct_pick3():
 
-    if choice_3.get() == correct_choice:
-        print('Correct pick test complete')
-        gameScreen_Gui.destroy()
-        correct()
+    try:
+        if choice_3.get() == correct_choice:
+            print('Correct pick test complete')
+            gameScreen_Gui.destroy()
+            correct()
 
-    elif choice_3.get() != correct_choice:
-        print('wrong answer test complete')
-        gameScreen_Gui.destroy()
-        incorrect()
+        elif choice_3.get() != correct_choice:
+            print('wrong answer test complete')
+            gameScreen_Gui.destroy()
+            incorrect()
+    except (EXCEPTION, Exception) as ex:
+        pass
 
 
 def correct_pick4():
+    try:
+        if choice_4.get() == correct_choice:
+            print('Correct pick test complete')
+            gameScreen_Gui.destroy()
+            correct()
 
-    if choice_4.get() == correct_choice:
-        print('Correct pick test complete')
-        gameScreen_Gui.destroy()
-        correct()
-
-    elif choice_4.get() != correct_choice:
-        print('wrong answer test complete')
-        gameScreen_Gui.destroy()
-        incorrect_music()
+        elif choice_4.get() != correct_choice:
+            print('wrong answer test complete')
+            gameScreen_Gui.destroy()
+            incorrect()
+    except (EXCEPTION, Exception) as ex:
+        pass
 
 
 if __name__ == '__main__':

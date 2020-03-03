@@ -68,12 +68,12 @@
       "QUESTIONS": [
          {
             "ID": "34",
-            "Question_ID": "You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
             "correct_Choice": "The Matrix",
             "choice1": "The Matrix",
             "choice2": "Spider-Man: Homecoming",
             "choice3": "Avengers: Infinity War",
-            "choice4": "The Matrix"
+            "choice4": "Kill Bill"
          }
       ]
    },
@@ -134,8 +134,1763 @@
          {
             "ID": "39",
             "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
-            "correct_Choice": "300",
-            "choice1": "300",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
+            "choice2": "Man on Fire",
+            "choice3": "The Avengers",
+            "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "30",
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "31",
+            "Question_ID": "I'm gonna ask you this one time, where is Gamora?",
+            "correct_Choice": "Avengers: Infinity War",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "32",
+            "Question_ID": "We are what they grow beyond.",
+            "correct_Choice": "Star Wars:  The Last Jedi",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "33",
+            "Question_ID": "Metaphors go over his head.",
+            "correct_Choice": "Guardians of the Galaxy",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "34",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
+            "correct_Choice": "The Matrix",
+            "choice1": "The Matrix",
+            "choice2": "Spider-Man: Homecoming",
+            "choice3": "Avengers: Infinity War",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "35",
+            "Question_ID": "Meanwhile, is there anything about the Tesseract that we ought to know?",
+            "correct_Choice": "The Avengers",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "36",
+            "Question_ID": "You're like Mary Poppins.",
+            "correct_Choice": "Guardians of the Galaxy vol.2",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "37",
+            "Question_ID": "Before we get started, does anyone want to get out?",
+            "correct_Choice": "Captain America: the Winter Soldier",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "38",
+            "Question_ID": "Okay, my friend. It's off to the next life for you. I guarantee you, you won't be lonely.",
+            "correct_Choice": "Man on Fire",
+            "choice1": "Man on Fire",
+            "choice2": "The Avengers",
+            "choice3": "Guardians of the Galaxy vol.2",
+            "choice4": "Doctor Strange"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "39",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
+            "choice2": "Man on Fire",
+            "choice3": "The Avengers",
+            "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "30",
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "31",
+            "Question_ID": "I'm gonna ask you this one time, where is Gamora?",
+            "correct_Choice": "Avengers: Infinity War",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "32",
+            "Question_ID": "We are what they grow beyond.",
+            "correct_Choice": "Star Wars:  The Last Jedi",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "33",
+            "Question_ID": "Metaphors go over his head.",
+            "correct_Choice": "Guardians of the Galaxy",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "34",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
+            "correct_Choice": "The Matrix",
+            "choice1": "The Matrix",
+            "choice2": "Spider-Man: Homecoming",
+            "choice3": "Avengers: Infinity War",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "35",
+            "Question_ID": "Meanwhile, is there anything about the Tesseract that we ought to know?",
+            "correct_Choice": "The Avengers",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "36",
+            "Question_ID": "You're like Mary Poppins.",
+            "correct_Choice": "Guardians of the Galaxy vol.2",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "37",
+            "Question_ID": "Before we get started, does anyone want to get out?",
+            "correct_Choice": "Captain America: the Winter Soldier",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "38",
+            "Question_ID": "Okay, my friend. It's off to the next life for you. I guarantee you, you won't be lonely.",
+            "correct_Choice": "Man on Fire",
+            "choice1": "Man on Fire",
+            "choice2": "The Avengers",
+            "choice3": "Guardians of the Galaxy vol.2",
+            "choice4": "Doctor Strange"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "39",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
+            "choice2": "Man on Fire",
+            "choice3": "The Avengers",
+            "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "30",
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "31",
+            "Question_ID": "I'm gonna ask you this one time, where is Gamora?",
+            "correct_Choice": "Avengers: Infinity War",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "32",
+            "Question_ID": "We are what they grow beyond.",
+            "correct_Choice": "Star Wars:  The Last Jedi",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "33",
+            "Question_ID": "Metaphors go over his head.",
+            "correct_Choice": "Guardians of the Galaxy",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "34",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
+            "correct_Choice": "The Matrix",
+            "choice1": "The Matrix",
+            "choice2": "Spider-Man: Homecoming",
+            "choice3": "Avengers: Infinity War",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "35",
+            "Question_ID": "Meanwhile, is there anything about the Tesseract that we ought to know?",
+            "correct_Choice": "The Avengers",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "36",
+            "Question_ID": "You're like Mary Poppins.",
+            "correct_Choice": "Guardians of the Galaxy vol.2",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "37",
+            "Question_ID": "Before we get started, does anyone want to get out?",
+            "correct_Choice": "Captain America: the Winter Soldier",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "38",
+            "Question_ID": "Okay, my friend. It's off to the next life for you. I guarantee you, you won't be lonely.",
+            "correct_Choice": "Man on Fire",
+            "choice1": "Man on Fire",
+            "choice2": "The Avengers",
+            "choice3": "Guardians of the Galaxy vol.2",
+            "choice4": "Doctor Strange"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "39",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
+            "choice2": "Man on Fire",
+            "choice3": "The Avengers",
+            "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "30",
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "31",
+            "Question_ID": "I'm gonna ask you this one time, where is Gamora?",
+            "correct_Choice": "Avengers: Infinity War",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "32",
+            "Question_ID": "We are what they grow beyond.",
+            "correct_Choice": "Star Wars:  The Last Jedi",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "33",
+            "Question_ID": "Metaphors go over his head.",
+            "correct_Choice": "Guardians of the Galaxy",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "34",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
+            "correct_Choice": "The Matrix",
+            "choice1": "The Matrix",
+            "choice2": "Spider-Man: Homecoming",
+            "choice3": "Avengers: Infinity War",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "35",
+            "Question_ID": "Meanwhile, is there anything about the Tesseract that we ought to know?",
+            "correct_Choice": "The Avengers",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "36",
+            "Question_ID": "You're like Mary Poppins.",
+            "correct_Choice": "Guardians of the Galaxy vol.2",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "37",
+            "Question_ID": "Before we get started, does anyone want to get out?",
+            "correct_Choice": "Captain America: the Winter Soldier",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "38",
+            "Question_ID": "Okay, my friend. It's off to the next life for you. I guarantee you, you won't be lonely.",
+            "correct_Choice": "Man on Fire",
+            "choice1": "Man on Fire",
+            "choice2": "The Avengers",
+            "choice3": "Guardians of the Galaxy vol.2",
+            "choice4": "Doctor Strange"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "39",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
+            "choice2": "Man on Fire",
+            "choice3": "The Avengers",
+            "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "30",
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "31",
+            "Question_ID": "I'm gonna ask you this one time, where is Gamora?",
+            "correct_Choice": "Avengers: Infinity War",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "32",
+            "Question_ID": "We are what they grow beyond.",
+            "correct_Choice": "Star Wars:  The Last Jedi",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "33",
+            "Question_ID": "Metaphors go over his head.",
+            "correct_Choice": "Guardians of the Galaxy",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "34",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
+            "correct_Choice": "The Matrix",
+            "choice1": "The Matrix",
+            "choice2": "Spider-Man: Homecoming",
+            "choice3": "Avengers: Infinity War",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "35",
+            "Question_ID": "Meanwhile, is there anything about the Tesseract that we ought to know?",
+            "correct_Choice": "The Avengers",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "36",
+            "Question_ID": "You're like Mary Poppins.",
+            "correct_Choice": "Guardians of the Galaxy vol.2",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "37",
+            "Question_ID": "Before we get started, does anyone want to get out?",
+            "correct_Choice": "Captain America: the Winter Soldier",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "38",
+            "Question_ID": "Okay, my friend. It's off to the next life for you. I guarantee you, you won't be lonely.",
+            "correct_Choice": "Man on Fire",
+            "choice1": "Man on Fire",
+            "choice2": "The Avengers",
+            "choice3": "Guardians of the Galaxy vol.2",
+            "choice4": "Doctor Strange"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "39",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
+            "choice2": "Man on Fire",
+            "choice3": "The Avengers",
+            "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "30",
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "31",
+            "Question_ID": "I'm gonna ask you this one time, where is Gamora?",
+            "correct_Choice": "Avengers: Infinity War",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "32",
+            "Question_ID": "We are what they grow beyond.",
+            "correct_Choice": "Star Wars:  The Last Jedi",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "33",
+            "Question_ID": "Metaphors go over his head.",
+            "correct_Choice": "Guardians of the Galaxy",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "34",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
+            "correct_Choice": "The Matrix",
+            "choice1": "The Matrix",
+            "choice2": "Spider-Man: Homecoming",
+            "choice3": "Avengers: Infinity War",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "35",
+            "Question_ID": "Meanwhile, is there anything about the Tesseract that we ought to know?",
+            "correct_Choice": "The Avengers",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "36",
+            "Question_ID": "You're like Mary Poppins.",
+            "correct_Choice": "Guardians of the Galaxy vol.2",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "37",
+            "Question_ID": "Before we get started, does anyone want to get out?",
+            "correct_Choice": "Captain America: the Winter Soldier",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "38",
+            "Question_ID": "Okay, my friend. It's off to the next life for you. I guarantee you, you won't be lonely.",
+            "correct_Choice": "Man on Fire",
+            "choice1": "Man on Fire",
+            "choice2": "The Avengers",
+            "choice3": "Guardians of the Galaxy vol.2",
+            "choice4": "Doctor Strange"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "39",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
+            "choice2": "Man on Fire",
+            "choice3": "The Avengers",
+            "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "30",
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "31",
+            "Question_ID": "I'm gonna ask you this one time, where is Gamora?",
+            "correct_Choice": "Avengers: Infinity War",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "32",
+            "Question_ID": "We are what they grow beyond.",
+            "correct_Choice": "Star Wars:  The Last Jedi",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "33",
+            "Question_ID": "Metaphors go over his head.",
+            "correct_Choice": "Guardians of the Galaxy",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "34",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
+            "correct_Choice": "The Matrix",
+            "choice1": "The Matrix",
+            "choice2": "Spider-Man: Homecoming",
+            "choice3": "Avengers: Infinity War",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "35",
+            "Question_ID": "Meanwhile, is there anything about the Tesseract that we ought to know?",
+            "correct_Choice": "The Avengers",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "36",
+            "Question_ID": "You're like Mary Poppins.",
+            "correct_Choice": "Guardians of the Galaxy vol.2",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "37",
+            "Question_ID": "Before we get started, does anyone want to get out?",
+            "correct_Choice": "Captain America: the Winter Soldier",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "38",
+            "Question_ID": "Okay, my friend. It's off to the next life for you. I guarantee you, you won't be lonely.",
+            "correct_Choice": "Man on Fire",
+            "choice1": "Man on Fire",
+            "choice2": "The Avengers",
+            "choice3": "Guardians of the Galaxy vol.2",
+            "choice4": "Doctor Strange"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "39",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
+            "choice2": "Man on Fire",
+            "choice3": "The Avengers",
+            "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "30",
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "31",
+            "Question_ID": "I'm gonna ask you this one time, where is Gamora?",
+            "correct_Choice": "Avengers: Infinity War",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "32",
+            "Question_ID": "We are what they grow beyond.",
+            "correct_Choice": "Star Wars:  The Last Jedi",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "33",
+            "Question_ID": "Metaphors go over his head.",
+            "correct_Choice": "Guardians of the Galaxy",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "34",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
+            "correct_Choice": "The Matrix",
+            "choice1": "The Matrix",
+            "choice2": "Spider-Man: Homecoming",
+            "choice3": "Avengers: Infinity War",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "35",
+            "Question_ID": "Meanwhile, is there anything about the Tesseract that we ought to know?",
+            "correct_Choice": "The Avengers",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "36",
+            "Question_ID": "You're like Mary Poppins.",
+            "correct_Choice": "Guardians of the Galaxy vol.2",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "37",
+            "Question_ID": "Before we get started, does anyone want to get out?",
+            "correct_Choice": "Captain America: the Winter Soldier",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "38",
+            "Question_ID": "Okay, my friend. It's off to the next life for you. I guarantee you, you won't be lonely.",
+            "correct_Choice": "Man on Fire",
+            "choice1": "Man on Fire",
+            "choice2": "The Avengers",
+            "choice3": "Guardians of the Galaxy vol.2",
+            "choice4": "Doctor Strange"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "39",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
+            "choice2": "Man on Fire",
+            "choice3": "The Avengers",
+            "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "30",
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "31",
+            "Question_ID": "I'm gonna ask you this one time, where is Gamora?",
+            "correct_Choice": "Avengers: Infinity War",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "32",
+            "Question_ID": "We are what they grow beyond.",
+            "correct_Choice": "Star Wars:  The Last Jedi",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "33",
+            "Question_ID": "Metaphors go over his head.",
+            "correct_Choice": "Guardians of the Galaxy",
+            "choice1": "Spider-Man: Homecoming",
+            "choice2": "Avengers: Infinity War",
+            "choice3": "Star Wars:  The Last Jedi",
+            "choice4": "Guardians of the Galaxy"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "34",
+            "Question_ID": "Ever have that feeling where you're not sure if you're awake or dreaming?",
+            "correct_Choice": "The Matrix",
+            "choice1": "The Matrix",
+            "choice2": "Spider-Man: Homecoming",
+            "choice3": "Avengers: Infinity War",
+            "choice4": "Kill Bill"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "35",
+            "Question_ID": "Meanwhile, is there anything about the Tesseract that we ought to know?",
+            "correct_Choice": "The Avengers",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "36",
+            "Question_ID": "You're like Mary Poppins.",
+            "correct_Choice": "Guardians of the Galaxy vol.2",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "37",
+            "Question_ID": "Before we get started, does anyone want to get out?",
+            "correct_Choice": "Captain America: the Winter Soldier",
+            "choice1": "The Avengers",
+            "choice2": "Guardians of the Galaxy vol.2",
+            "choice3": "Captain America: the Winter Soldier",
+            "choice4": "The Matrix"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "38",
+            "Question_ID": "Okay, my friend. It's off to the next life for you. I guarantee you, you won't be lonely.",
+            "correct_Choice": "Man on Fire",
+            "choice1": "Man on Fire",
+            "choice2": "The Avengers",
+            "choice3": "Guardians of the Galaxy vol.2",
+            "choice4": "Doctor Strange"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "39",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
+            "correct_Choice": "Iron Man 2",
+            "choice1": "Iron Man 2",
             "choice2": "Man on Fire",
             "choice3": "The Avengers",
             "choice4": "Guardians of the Galaxy vol.2"
