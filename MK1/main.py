@@ -11,6 +11,7 @@ from winsound import SND_FILENAME,SND_ASYNC, SND_LOOP, PlaySound
 
 start = list()
 score = 0
+repeat = 0
 
 
 def correct_music():
@@ -52,7 +53,6 @@ def intro_music():
     #for f in file:
     song = random.choice(file)
     PlaySound(song, SND_FILENAME|SND_LOOP|SND_ASYNC)
-
 
 
 def exit():
@@ -326,47 +326,65 @@ def game_screen():
                        f"qc.choice2, qc.choice3, qc.choice4 from question_choices qc inner join questions q "
                        f"on qc.question_id=q.question_id inner join question_category qct "
                        f"on qct.cat_id = qc.cat_id and q.cat_id = qc.cat_id where qc.cat_id={categoryOpp};")
+    try:
+        info = cursor.fetchall()
+        with open('question.json', 'r') as file:
+            test1 = json.load(file)
 
-    info = cursor.fetchall()
-    with open('question.json', 'r') as file:
-        test1 = json.load(file)
+        for i in info:
+            choice_ID = f'{i[0]}'
+            question_Sen = f'{i[1]}'.strip()
+            correct_choice = f'{i[2]}'.strip()
+            choice1 = f'{i[3]}'.strip()
+            choice2 = f'{i[4]}'.strip()
+            choice3 = f'{i[5]}'.strip()
+            choice4 = f'{i[6]}'.strip()
 
-    for i in info:
-        choice_ID = f'{i[0]}'
-        question_Sen = f'{i[1]}'.strip()
-        correct_choice = f'{i[2]}'.strip()
-        choice1 = f'{i[3]}'.strip()
-        choice2 = f'{i[4]}'.strip()
-        choice3 = f'{i[5]}'.strip()
-        choice4 = f'{i[6]}'.strip()
+            test1 = [
+                {"ID": choice_ID, "Question_ID": question_Sen, "correct_Choice": correct_choice, "choice1": choice1,
+                 "choice2": choice2, "choice3": choice3, "choice4": choice4}]
 
-        test1 = [{"ID": choice_ID, "Question_ID": question_Sen, "correct_Choice": correct_choice, "choice1": choice1,
-                  "choice2": choice2, "choice3": choice3, "choice4": choice4}]
+            with open('question.json', 'w') as file:
+                start_dict = {"QUESTIONS": test1}
+                start.append(start_dict)
 
-        with open('question.json', 'w') as file:
-            start_dict = {"QUESTIONS": test1}
-            start.append(start_dict)
+                run = json.dump(start, file, indent=3)
 
-            run = json.dump(start, file, indent=3)
-
-    with open('question.json', 'r') as file:
+        with open('question.json', 'r') as file:
             test2 = json.load(file)
 
-    data = random.choice(test2)
-    print(data)
+        data = random.choice(test2)
+        print(data)
 
-    question_Sen = data['QUESTIONS'][0]['Question_ID']
-    correct_choice = data['QUESTIONS'][0]['correct_Choice']
-    choice1 = data['QUESTIONS'][0]['choice1']
-    choice2 = data['QUESTIONS'][0]['choice2']
-    choice3 = data['QUESTIONS'][0]['choice3']
-    choice4 = data['QUESTIONS'][0]['choice4']
+        question_Sen = data['QUESTIONS'][0]['Question_ID']
+        correct_choice = data['QUESTIONS'][0]['correct_Choice']
+        choice1 = data['QUESTIONS'][0]['choice1']
+        choice2 = data['QUESTIONS'][0]['choice2']
+        choice3 = data['QUESTIONS'][0]['choice3']
+        choice4 = data['QUESTIONS'][0]['choice4']
 
-    print(question_Sen, choice1, choice2, choice3, choice4)
-
+        print(question_Sen, choice1, choice2, choice3, choice4)
+    except (IOError, FileNotFoundError, TypeError, Exception) as ex:
+        print(ex)
+        pass
+        """
+            with open('question.json', 'r') as file:
+                test2 = json.load(file)
+                # data = random.choice(test2)
+                # print(data)
+        
+            for t in test2:
+                question_Sen = t['QUESTIONS'][0]['Question_ID']
+                correct_choice = t['QUESTIONS'][0]['correct_Choice']
+                choice1 = t['QUESTIONS'][0]['choice1']
+                choice2 = t['QUESTIONS'][0]['choice2']
+                choice3 = t['QUESTIONS'][0]['choice3']
+                choice4 = t['QUESTIONS'][0]['choice4']
+                t['QUESTIONS'][0]['Repeat'] = 1
+"""
     # ------------------------------------------------------------------------------------------------------------------
     #username = StringVar()
-    username_label = Label(gameScreen_Gui, textvariable=username_l, bg='white', width='20', height='3')
+    username_label = Label(gameScreen_Gui, textvariable=username_l, bg='white', width='20', height='3',font=15)
     username_label.grid(row=0, column=0, sticky=NW, padx=85)
 
     Label(gameScreen_Gui, text='Username:', height=3).grid(row=0, sticky=NW)
@@ -375,8 +393,6 @@ def game_screen():
     question.set(question_Sen)
     question_label = Label(gameScreen_Gui, textvariable=question, background='white', width='100', height='8', font=40)
     question_label.grid(row=0, columnspan=2, padx=120, pady=100)
-
-    #Label(win, text='Question:', height=3).grid(row=0, sticky=W, padx=10)
 
     choice_1 = StringVar()
     choice_1.set(choice1)
@@ -413,6 +429,11 @@ def game_screen():
     with open('question_number.json', 'w') as file:
         save = json.dump(question_number, file)
         print(f'question_num: {save}')
+
+    if question_number["question_num"] == 10:
+        gameScreen_Gui.destroy()
+        leaderboard()
+
 
 
 def game_menu():
@@ -459,13 +480,50 @@ def game_menu():
     log_out = Button(frame1, text='Log Out', font=("Calibri", 10), height=1, width=8, command=exit_menu)
     log_out.pack(side=TOP, anchor=E, padx=10, pady=10)
 
-    leaderboard_button = Button(frame2, text='Leaderboard', font=("Calibri", 10), height=1, width=12)
+    leaderboard_button = Button(frame2, text='Leaderboard', font=("Calibri", 10), height=1, width=12, command=leaderboard)
     leaderboard_button.pack(side=TOP, anchor=W, padx=10, pady=10)
 
     game_button = Button(gameMenu_Gui, text='PLAY GAME', font=("Calibri", 20), height=3, width=15, command=game_screen)
     game_button.pack(side=TOP, anchor=N, pady=200)
 
     gameMenu_Gui.update()
+
+
+def leaderboard():
+
+    leaderboard_gui = Tk()
+    leaderboard_gui.geometry("1200x800")
+    leaderboard_gui.config(bg='dark turquoise')
+
+    frame1 = Frame(leaderboard_gui, bg='dark turquoise')
+    frame1.pack(side=TOP, anchor=E)
+
+    frame2 = Frame(leaderboard_gui, bg='dark turquoise')
+    frame2.place(x=0, y=0)
+
+    frame3 = Frame(leaderboard_gui)
+    frame3.pack(side=TOP, anchor=N)
+
+    leaderboard_label = Label(frame3, text='LEADERBOARD', bg='dark turquoise', fg='black')
+    leaderboard_label.config(font="Calibri 30 underline")
+    leaderboard_label.pack()
+
+    exit_game = Button(frame1, text='Exit', font=("Calibri", 10), height=1, width=8, command=exit)
+    exit_game.pack(side=TOP, anchor=E, padx=10, pady=10)
+
+    return_button = Button(frame2, text='Return to Menu', font=("Calibri", 10), height=1, width=12, command=game_menu)
+    return_button.pack(side=TOP, anchor=W, padx=10, pady=10)
+
+    with open('score.json', 'r') as file:
+        read = json.load(file)
+        name = read['User']
+        score3 = read['Score']
+        total = f'{name} - {score3} Points'
+
+    leaderboard_data = Listbox(leaderboard_gui, height=65, width=75, font=50)
+    leaderboard_data.pack(side=TOP, anchor=N, pady=10)
+    leaderboard_data.insert(1, total)
+    leaderboard_gui.update()
 
 
 def destroy():
@@ -486,13 +544,26 @@ def incorrect():
     okay.geometry("1200x800")
     okay.config(bg='dark turquoise')
 
-    continue1 = Button(okay, text=" Continue", command=lambda: [game_screen(), destroy()])
-    continue1.grid(row=2, column=1, sticky=W)
+    Label(okay, text="That is incorrect! D:", height='3', bg='gray37', font=(None, 30)).grid(row=1, columnspan=2,
+                                                                                            padx=480, pady=100)
+
+    continue_btn = Button(okay, text='Continue', height='3', bg='gray37', command=lambda: [game_screen(), destroy()])
+    continue_btn.grid(row=2, sticky=SE)
+
+    logout_btn = Button(okay, text='Logout', height='3', bg='gray37', command=log_on)
+    logout_btn.grid(row=0, column=1, sticky=E)
+
+    exit_btn = Button(okay, text='Exit', height='3', width='5', bg='gray37', command=exit_game)
+    exit_btn.grid(row=0, column=0, sticky=W)
+
+
+    #continue1 = Button(okay, text=" Continue", command=lambda: [game_screen(), destroy()])
+    #continue1.grid(row=2, column=1, sticky=W)
 
 
 def score1():
     score = 0
-    final_score = {"Score": score}
+    final_score = {"User":username_l,"Score": score}
     final_score["Score"] += 20
 
     with open('score.json', 'w') as file:
@@ -504,11 +575,11 @@ def correct():
     """ """
     global correct12
     correct_music()
-
+    name = f'{username_l.get()}'
     with open('score.json', 'r') as file:
         exe = json.load(file)
         score = exe['Score']
-    final_score = {"Score": score}
+    final_score = {"User": name, "Score": score}
     final_score["Score"] = final_score.get("Score", 0) + 20
 
     with open('score.json', 'w') as file:
@@ -519,8 +590,20 @@ def correct():
     correct12.geometry("1200x800")
     correct12.config(bg='dark turquoise')
 
-    continue1 = Button(correct12, text=" Continue", command=lambda: [game_screen(), cor_destroy()])
-    continue1.grid(row=2, column=1, sticky=W)
+    #continue1 = Button(correct12, text=" Continue", command=lambda: [game_screen(), cor_destroy()])
+    #continue1.grid(row=2, column=1, sticky=W)
+
+    Label(correct12, text="That is correct! :D", height='5', bg='gray37', font=(None, 30)).grid(row=1, columnspan=2, padx=480,
+                                                                                          pady=100)
+
+    continue_btn = Button(correct12, text='Continue', height='3', bg='gray37', command=lambda: [game_screen(), cor_destroy()])
+    continue_btn.grid(row=2, sticky=SE)
+
+    logout_btn = Button(correct12, text='Logout', height='3', bg='gray37', command=log_on)
+    logout_btn.grid(row=0, column=1, sticky=E)
+
+    exit_btn = Button(correct12, text='Exit', height='3', width='5', bg='gray37', command=exit_game)
+    exit_btn.grid(row=0, column=0, sticky=W)
 
 
 def correct_pick1():
@@ -559,7 +642,7 @@ def correct_pick3():
     elif choice_3.get() != correct_choice:
         print('wrong answer test complete')
         gameScreen_Gui.destroy()
-        correct()
+        incorrect()
 
 
 def correct_pick4():
@@ -572,7 +655,7 @@ def correct_pick4():
     elif choice_4.get() != correct_choice:
         print('wrong answer test complete')
         gameScreen_Gui.destroy()
-        correct()
+        incorrect_music()
 
 
 if __name__ == '__main__':

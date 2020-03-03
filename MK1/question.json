@@ -3,12 +3,25 @@
       "QUESTIONS": [
          {
             "ID": "30",
-            "Question_ID": "I'm sick of Mr. Stark treating me like a kid.",
-            "correct_Choice": "Spider-Man: Homecoming",
-            "choice1": "Spider-Man: Homecoming",
-            "choice2": "Avengers: Infinity War",
-            "choice3": "Star Wars:  The Last Jedi",
-            "choice4": "Guardians of the Galaxy"
+            "Question_ID": "I\u2019m going to make him an offer he can\u2019t refuse",
+            "correct_Choice": "The Godfather",
+            "choice1": "Goodfellas",
+            "choice2": "Scareface",
+            "choice3": "The Godfather",
+            "choice4": "Heat"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "40",
+            "Question_ID": "Just when I thought I was out, they pull me back in",
+            "correct_Choice": "The Godfather Part III",
+            "choice1": "Scarface",
+            "choice2": "The Godfather Part III",
+            "choice3": "Rocky",
+            "choice4": "American Gangster"
          }
       ]
    },
@@ -120,12 +133,64 @@
       "QUESTIONS": [
          {
             "ID": "39",
-            "Question_ID": "What makes this woman think she can speak among men? Because only Spartan women give birth to real men.",
+            "Question_ID": "Sir! I'm going to have to ask you to exit the donut!",
             "correct_Choice": "300",
             "choice1": "300",
             "choice2": "Man on Fire",
             "choice3": "The Avengers",
             "choice4": "Guardians of the Galaxy vol.2"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "41",
+            "Question_ID": "They call it a Royale with cheese",
+            "correct_Choice": "Pulp Fiction",
+            "choice1": "Kill Bill",
+            "choice2": "Inglorious Bastards",
+            "choice3": "Unbreakable",
+            "choice4": "Pulp Fiction"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "42",
+            "Question_ID": "I love the smell of napalm in the morning",
+            "correct_Choice": "Apocalypse now",
+            "choice1": "Full metal jacket",
+            "choice2": "Apocalypse now",
+            "choice3": "Platoon",
+            "choice4": "The Deer Hunter"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "43",
+            "Question_ID": "Yippee-ki-yay, motherf*cker",
+            "correct_Choice": "Die hard",
+            "choice1": "Lethal Weapon",
+            "choice2": "Hostage",
+            "choice3": "Die hard",
+            "choice4": "Mercury Rising"
+         }
+      ]
+   },
+   {
+      "QUESTIONS": [
+         {
+            "ID": "44",
+            "Question_ID": "Those of you lucky enough to have your lives, take them with you. However, leave the limbs you\u2019ve lost. They belong to me now.",
+            "correct_Choice": "Kill Bill",
+            "choice1": "Reservoir Dogs",
+            "choice2": "Grindhouse",
+            "choice3": "Django Unchained",
+            "choice4": "Kill Bill"
          }
       ]
    }
